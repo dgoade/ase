@@ -15,6 +15,7 @@ The tasks can be roughly categorized as follows:
 5. Regular Expressions
 
 The scripting languages that I am including so far are:
+
 1. Bash
 2. Perl
 3. Python
