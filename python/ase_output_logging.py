@@ -17,7 +17,7 @@ def main():
 
     rval=True
 
-    logging.config.fileConfig('./logging.conf')
+    logging.config.fileConfig('conf/ase_logging.conf')
     logger = logging.getLogger('root')
 
     if Verbose:
