@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Author: david.goade@ntrepidcorp.com (David Goade) 
+# Author: dgoade@gmail.com (David Goade) 
 #
 # Test the parse_args library 
 #-----------------------------------------------------------------------------
