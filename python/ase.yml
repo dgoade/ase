@@ -22,7 +22,7 @@ logging:
       formatter: "simple"
       filename: "logs/ase_logging.log"
   loggers:
-    Main:
+    execute:
       level: "DEBUG"
       handlers:
         - "file"
