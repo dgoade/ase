@@ -1,5 +1,4 @@
-#!/usr/bin/python
-
+#!/usr/bin/env python
 
 # Automation Scripting Essential Skills 
 # Python

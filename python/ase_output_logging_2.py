@@ -35,17 +35,9 @@ def main():
     log_msg = 'Logging config dictionary loaded successfully.'
     logger.debug(log_msg)
 
-    logger.debug('Logging pformatted data of the config_dict')
-    logger.debug(pformat(config_dict))
-
     if Verbose:
-        # Add the console handler
-        ch = logging.StreamHandler()
-        ch.setLevel(1)
-        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
-
+        logger.debug('Logging pformatted data of the config_dict')
+        logger.debug(pformat(config_dict))
 
     if rval:
         logger.debug('This is a debug message')
