@@ -1,3 +1,33 @@
 setting1: foo
 setting2: bar
 setting3: baz
+logging:
+  version: 1
+  formatters:
+    simple:
+      format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    console:
+      class: "logging.StreamHandler"
+      level: "DEBUG"
+      formatter: "simple"
+      stream: "ext://sys.stdout"
+    stderr:
+      class: "logging.StreamHandler"
+      level: "WARN"
+      formatter: "simple"
+      stream: "ext://sys.stderr"
+    file:
+      class: "logging.FileHandler"
+      formatter: "simple"
+      filename: "logs/ase_logging.log"
+  loggers:
+    Main:
+      level: "DEBUG"
+      handlers:
+        - "file"
+        - "console"
+      propagate: "no"
+  root:
+    level: "WARNING"
+    handlers: []

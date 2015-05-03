@@ -1,5 +1,6 @@
-#!/usr/bin/python
-# Automation Scripting Essential Skills 
+#!/usr/bin/env python
+
+# Automation Scripting Essential Skills
 # Python
 
 # Interpolation 
