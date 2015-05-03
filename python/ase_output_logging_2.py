@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__author__ = 'david.goade'
+__author__ = 'dgoade'
 
 
 # Automation Scripting Essential Skills
