@@ -14,10 +14,6 @@ import logging
 from logging.config import dictConfig
 from pprint import pformat
 
-LogFileName='./logging.log'
-LogLevel='DEBUG'
-Verbose=True
-
 def main():
 
     rval=True
@@ -34,10 +30,8 @@ def main():
     logger = logging.getLogger('Main.{0}'.format(__name__))
     log_msg = 'Logging config dictionary loaded successfully.'
     logger.debug(log_msg)
-
-    if Verbose:
-        logger.debug('Logging pformatted data of the config_dict')
-        logger.debug(pformat(config_dict))
+    logger.debug('Logging pformatted data of the config_dict')
+    logger.debug(pformat(config_dict))
 
     if rval:
         logger.debug('This is a debug message')
