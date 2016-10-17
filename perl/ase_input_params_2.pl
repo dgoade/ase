@@ -59,13 +59,13 @@ Required Arguments:
 
 Optional Arguments:
 
-    -l|--loglevel     Logging level to use 
+    -l|--loglevel     Logging level to use (debug info warn error fatal)
 
     -n|--noop         Run in no-op mode
 
     -h|--help         display usage
 
-    -v|--verbosity      level to log (debug info warn error fatal)
+    -v|--verbosity    Run in verbose mode (regardless of loglevel) 
 
 =head1 EXAMPLES
 
