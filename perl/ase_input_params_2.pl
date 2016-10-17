@@ -14,6 +14,7 @@ our $Help;
 our $LogLevel;
 our $NoOp;
 our $Verbose;
+our $LogMsg;
 
 GetOptions (
     "a|action=s"   => \$Action,
@@ -59,7 +60,9 @@ elsif( $Action =~ /special/i )
 }
 else
 {
-    print "Action is required -- 'pass --help for usage'\n";
+    $LogMsg = "Unsupported action '$Action";
+    $LogMsg = "$LogMsg ' -- pass '--help' for usage'\n";
+    print $LogMsg
 }
 
 __END__
