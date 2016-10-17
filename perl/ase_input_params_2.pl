@@ -29,12 +29,29 @@ if( $Help )
 }
 else
 {
-    print "Parameters you passed:\n";
-    print "action=$Action\n";
-    print "help=$Help\n";
-    print "loglevel=$LogLevel\n";
-    print "noop=$NoOp\n";
-    print "verbose=$Verbose\n";
+
+    if( $Verbose )
+    {
+        print "Parameters you passed:\n";
+        print "action=$Action\n";
+        print "help=$Help\n";
+        print "loglevel=$LogLevel\n";
+        print "noop=$NoOp\n";
+        print "verbose=$Verbose\n";
+    }
+}
+
+if( $Action =~ /normal/i )
+{
+    print "Running normally\n"
+}
+elsif( $Action =~ /special/i )
+{
+    print "Running specially\n"
+}
+else
+{
+    print "Action is required -- 'pass --help for usage'\n"
 }
 
 __END__
@@ -54,7 +71,7 @@ ase_input_params_2.pl - Parsing command-line parameters example
 
 Required Arguments:
 
-    -a|--action       The action to take 
+    -a|--action       The action to take (normal special)
 
 
 Optional Arguments:
