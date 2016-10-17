@@ -43,15 +43,23 @@ else
 
 if( $Action =~ /normal/i )
 {
-    print "Running normally\n"
+    print "Running normally\n";
+    if( $NoOp )
+    {
+        print "in no-op mode\n";
+    }
 }
 elsif( $Action =~ /special/i )
 {
-    print "Running specially\n"
+    print "Running specially\n";
+    if( $NoOp )
+    {
+        print "in no-op mode\n";
+    }
 }
 else
 {
-    print "Action is required -- 'pass --help for usage'\n"
+    print "Action is required -- 'pass --help for usage'\n";
 }
 
 __END__
@@ -78,7 +86,7 @@ Optional Arguments:
 
     -l|--loglevel     Logging level to use (debug info warn error fatal)
 
-    -n|--noop         Run in no-op mode
+    -n|--noop         Run in no-op mode -- show what you would do
 
     -h|--help         display usage
 
