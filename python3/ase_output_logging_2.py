@@ -7,16 +7,17 @@ __author__ = 'dgoade'
 # Python
 
 # Output: Logging
-# Technique2 -- Use python2.7's core logging and configDict with yaml
+# Technique2 -- Use python's core logging and configDict with yaml
 import sys
 import yaml
 import logging
 from logging.config import dictConfig
 from pprint import pformat
 
+
 def main():
 
-    rval=True
+    result = True
 
     f = open(sys.argv[1])
     config_dict = yaml.safe_load(f)
@@ -33,12 +34,13 @@ def main():
     logger.debug('Logging pformatted data of the config_dict')
     logger.debug(pformat(config_dict))
 
-    if rval:
+    if result:
         logger.debug('This is a debug message')
         logger.info('This is an info message')
-        logger.warn('This is a warn message')
+        logger.warning('This is a warn message')
         logger.error('This is an error message')
         logger.critical('This is a critical message')
+
 
 if __name__ == "__main__":
     main()

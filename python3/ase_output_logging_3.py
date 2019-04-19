@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 __author__ = 'dgoade'
 
@@ -68,7 +68,7 @@ class Configurator:
 
 def main():
 
-    rval=True
+    result = True
 
     configurator = Configurator()
     if configurator.config_dict['logging']:
@@ -83,12 +83,13 @@ def main():
     logger.debug('Logging pformatted data of the config_dict')
     logger.debug(pformat(configurator.config_dict))
 
-    if rval:
+    if result:
         logger.debug('This is a debug message')
         logger.info('This is an info message')
-        logger.warn('This is a warn message')
+        logger.warning('This is a warn message')
         logger.error('This is an error message')
         logger.critical('This is a critical message')
+
 
 if __name__ == "__main__":
     main()

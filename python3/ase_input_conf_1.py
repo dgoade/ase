@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 # Automation Scripting Essential Skills 
@@ -7,10 +7,10 @@
 # Input: Reading configuration files
 # Technique1 -- Use ConfigParser and an ini-type file 
 import sys
-import ConfigParser
+import configparser
 
 # SafeConfigParser supports interpolation
-config = ConfigParser.SafeConfigParser()
+config = configparser.ConfigParser()
 config.read(sys.argv[1])
 
-print config.get('root', sys.argv[2])
+print(config.get('root', sys.argv[2]))

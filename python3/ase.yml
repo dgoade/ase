@@ -19,6 +19,7 @@ logging:
       stream: "ext://sys.stderr"
     file:
       class: "logging.FileHandler"
+      level: "INFO"
       formatter: "simple"
       filename: "logs/ase_logging.log"
   loggers:
@@ -29,5 +30,5 @@ logging:
         - "console"
       propagate: "no"
   root:
-    level: "WARNING"
-    handlers: []
+    level: "DEBUG"
+    handlers: ['console', 'file']
