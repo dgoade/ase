@@ -4,7 +4,7 @@
 # Python
 
 # Input: Parsing command-line parameters 
-# Technique1 -- Use getopt 
+# Technique2 -- Use getopt
 import getopt
 import sys
 
