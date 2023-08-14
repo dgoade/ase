@@ -9,9 +9,10 @@
 import logging
 import logging.config
 
-LogFileName='./logging.log'
-LogLevel='DEBUG'
-Verbose=True
+LogFileName = './logging.log'
+LogLevel = 'DEBUG'
+Verbose = True
+
 
 def main():
 
@@ -35,6 +36,7 @@ def main():
         logger.warn('This is a warn message')
         logger.error('This is an error message')
         logger.critical('This is a critical message')
+
 
 if __name__ == "__main__":
     main()

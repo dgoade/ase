@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Automation Scripting Essential Skills 
 # Python
@@ -8,15 +8,17 @@
 import getopt
 import sys
 
+
 def usage():
-    print "usage"
+    print("usage")
+
 
 def main():
 
-    rval = True
+    result = True
 
     help = False
-    logLevel = "error"
+    log_level = "error"
     no_op = False
     verbose = False
  
@@ -24,11 +26,12 @@ def main():
         opts, args = getopt.getopt(sys.argv[1:], "a:hl:nv", ["action=", "help", "loglevel=", "noop", "verbose"])
     except getopt.GetoptError as err:
         # print help information and exit:
-        print str(err) # will print something like "option -a not recognized"
+        print(str(err)) # will print something like "option -a not recognized"
         usage()
-        rval = False
+        result = False
 
-    if rval:
+    if result:
+        action = 'run'
         no_op = False
         verbose = False
         for o, a in opts:
@@ -37,9 +40,9 @@ def main():
             elif o in ("-h", "--help"):
                 help = True
                 usage()
-                rval = False
+                result = False
             elif o in ("-l", "--loglevel"):
-                logLevel = a
+                log_level = a
             elif o in ("-n", "--noop"):
                 no_op = True
             elif o in ("-v", "--verbose"):
@@ -47,13 +50,14 @@ def main():
             else:
                 assert False, "unhandled option"
 
-    if rval:
-        print "You passed these args:"
-        print ("action: %s" % action)
-        print ("help: %s" % help)
-        print ("loglevel: %s" % logLevel)
-        print ("noop: %s" % no_op)
-        print ("verbose: %s" % verbose)
+    if result:
+        print("You passed these args:")
+        print(f"action: {action}")
+        print(f"help: {help}")
+        print(f"loglevel: {log_level}")
+        print(f"noop: {no_op}")
+        print(f"verbose: {verbose}")
+
 
 if __name__ == "__main__":
     main()
